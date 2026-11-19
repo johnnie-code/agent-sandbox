@@ -1,0 +1,7 @@
+# Optional: build the image the server hands to `docker run`.
+#   docker compose build sandbox
+# Then the MCP server uses SANDBOX_IMAGE=agent-sandbox:latest.
+services:
+  sandbox:
+    build: .
+    image: agent-sandbox:latest

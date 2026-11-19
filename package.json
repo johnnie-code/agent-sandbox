@@ -1,0 +1,25 @@
+{
+  "name": "agent-sandbox",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An MCP server that gives AI agents a disposable workspace to clone, edit, run and test code.",
+  "bin": { "agent-sandbox": "./dist/server.js" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "dev": "tsx src/server.ts",
+    "test": "tsx --test test/paths.test.ts test/exec.test.ts",
+    "smoke": "tsx scripts/smoke.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": { "node": ">=20" }
+}
